@@ -11,6 +11,8 @@ public class BaseTest {
     @BeforeMethod 
     public void startDriver(){
         driver=new MydriverManager().initialiseDriver();
+        driver.get("http://askomdch.com"); 
+        driver.manage().window().maximize();
     }
     @AfterMethod
     public void quitDriver(){

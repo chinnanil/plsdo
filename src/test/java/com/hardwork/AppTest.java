@@ -1,7 +1,6 @@
 package com.hardwork;
 
 import com.hardwork.base.BaseTest;
-
 import org.testng.annotations.Test;
 
 /**
@@ -15,6 +14,6 @@ public class AppTest extends BaseTest
     @Test
     public void shouldAnswerWithTrue()
     {
-           driver.get("http://askomdch.com"); 
+           
             }
 }
