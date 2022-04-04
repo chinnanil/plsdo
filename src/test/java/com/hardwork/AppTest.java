@@ -1,6 +1,8 @@
 package com.hardwork;
 
 import com.hardwork.base.BaseTest;
+import com.hardwork.pages.HomePage;
+
 import org.testng.annotations.Test;
 
 /**
@@ -12,8 +14,8 @@ public class AppTest extends BaseTest
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void checkoutDBT()
     {
-           
+           HomePage homePage=new HomePage(driver);
             }
 }
