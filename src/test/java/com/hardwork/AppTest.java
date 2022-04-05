@@ -2,6 +2,7 @@ package com.hardwork;
 
 import com.hardwork.base.BaseTest;
 import com.hardwork.pages.HomePage;
+import com.hardwork.pages.StorePage;
 
 import org.testng.annotations.Test;
 
@@ -17,5 +18,6 @@ public class AppTest extends BaseTest
     public void checkoutDBT()
     {
            HomePage homePage=new HomePage(driver);
+           StorePage storePage= homePage.clickStore();
             }
 }
