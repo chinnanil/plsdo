@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ElementUtils {
-WebDriver driver;
+public class ElementUtils extends BasePage {
+
     public ElementUtils(WebDriver driver) {
-        this.driver=driver;
+       super(driver);
            }
            public void testElUtils(){
                System.out.println("testElUtils");

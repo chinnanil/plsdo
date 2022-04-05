@@ -19,5 +19,7 @@ public class AppTest extends BaseTest
     {
            HomePage homePage=new HomePage(driver);
            StorePage storePage= homePage.clickStore();
+           storePage.searchProduct();
+         storePage.addAndViewcart();
             }
 }
