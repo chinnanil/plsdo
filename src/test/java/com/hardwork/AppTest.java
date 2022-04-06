@@ -1,6 +1,7 @@
 package com.hardwork;
 
 import com.hardwork.base.BaseTest;
+import com.hardwork.pages.CartPage;
 import com.hardwork.pages.HomePage;
 import com.hardwork.pages.StorePage;
 
@@ -20,6 +21,7 @@ public class AppTest extends BaseTest
            HomePage homePage=new HomePage(driver);
            StorePage storePage= homePage.clickStore();
            storePage.searchProduct();
-         storePage.addAndViewcart();
+         CartPage cartPage= storePage.addAndViewcart();
+         cartPage.checkAndCheckout();
             }
 }

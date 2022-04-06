@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class StorePage extends BasePage {
 
     By searchBox = By.id("woocommerce-product-search-field-0");
-  By searchResult = By.xpath("woocommerce-products-header__title page-title");
+  By searchResult = By.xpath("//*[@id=\"main\"]/div/header/h1");
     public StorePage(WebDriver driver) {
             super(driver);
             elUtils=new ElementUtils(driver);
@@ -19,9 +19,11 @@ public class StorePage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(elUtils.getElementByID(searchBox))).sendKeys("blue");
         elUtils.getElementByXpath(By.xpath("//*[@id=\"woocommerce_product_search-1\"]/form/button")).click();
     }
-    public void addAndViewcart(){
-        wait.until(ExpectedConditions.visibilityOf(elUtils.getElementByClassName(searchResult)));
+    public CartPage addAndViewcart(){
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(searchResult,"Search results: “blue”"));
         elUtils.getElementByXpath(By.xpath("//*[@id=\"main\"]/div/ul/li[1]/div[2]/a[2]")).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"main\"]/div/ul/li[1]/div[2]/a[3]"))).click();
+        return new CartPage(driver);
     }
 
     
