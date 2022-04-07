@@ -3,6 +3,15 @@ package com.hardwork.utils;
 public class Address {
     private String fName,lName,streetAddress,townOrCity,emailAddress;
     private String zipCode;
+    public Address(){};
+    public Address(String fName,String lName,String streetAddress,String townOrCity,String zipCode,String emailAddress){
+            this.fName=fName;
+            this.lName=lName;
+            this.streetAddress=streetAddress;
+            this.townOrCity=townOrCity;
+            this.zipCode=zipCode;
+            this.emailAddress=emailAddress;
+    }
     public String getfName() {
         return fName;
     }
