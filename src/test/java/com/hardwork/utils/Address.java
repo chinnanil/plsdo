@@ -2,7 +2,7 @@ package com.hardwork.utils;
 
 public class Address {
     private String fName,lName,streetAddress,townOrCity,emailAddress;
-    private int zipCode;
+    private String zipCode;
     public String getfName() {
         return fName;
     }
@@ -38,10 +38,10 @@ public class Address {
         this.emailAddress = emailAddress;
         return this;
     }
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
-    public Address setZipCode(int zipCode) {
+    public Address setZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
