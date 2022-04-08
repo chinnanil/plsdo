@@ -29,9 +29,9 @@ public class AppTest extends BaseTest
     @Test
     public void checkoutDBT() throws StreamReadException, DatabindException, IOException
     {
-      Address address=new Address();
-      InputStream is= getClass().getClassLoader().getResourceAsStream("billingJson.json");
-      address =JacksonUtils.deserializeJson(is, address);
+     // Address address=new Address();
+      
+      Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
            HomePage homePage=new HomePage(driver);
            StorePage storePage= homePage.clickStore();
            storePage.searchProduct();
