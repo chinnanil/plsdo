@@ -15,7 +15,7 @@ public class App
     public static void main( String[] args ) throws ClassNotFoundException
     {
         //new App().fun(int.class);
-        App app=new App();
+      //  App app=new App();
         // System.out.println(c);
       //  System.out.println( cc );
     }

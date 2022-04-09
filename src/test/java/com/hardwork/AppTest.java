@@ -12,6 +12,7 @@ import com.hardwork.pages.HomePage;
 import com.hardwork.pages.StorePage;
 import com.hardwork.utils.Address;
 import com.hardwork.utils.JacksonUtils;
+import com.hardwork.utils.Products;
 
 import org.testng.annotations.Test;
 
@@ -30,15 +31,30 @@ public class AppTest extends BaseTest
     public void checkoutDBT() throws StreamReadException, DatabindException, IOException
     {
      // Address address=new Address();
-      
+     Products product= new Products(123);
       Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
            HomePage homePage=new HomePage(driver);
            StorePage storePage= homePage.clickStore();
            storePage.searchProduct();
          CartPage cartPage= storePage.addAndViewcart();
-         CheckoutPage checkoutPage = cartPage.checkAndCheckout();
+         CheckoutPage checkoutPage = cartPage.checkAndCheckout(product);
          //Address address= new Address().setfName("anil").setlName("kumar").setStreetAddress("a.t.agraharam").setTownOrCity("guntur").setZipCode("522005").setEmailAddress("email@gmail.com");
        //  checkoutPage.enterFname("anil").enterLname("kumar").enterBillingAddress1("a.t.agraharam").enterBillingCity("guntur").enterBillingPcode("522004").enterBillingEmail("ee@ee.com");
        checkoutPage.fillForm(address);
             }
+            // @Test
+            // public void loginAndcheckoutDBT() throws StreamReadException, DatabindException, IOException
+            // {
+            //  // Address address=new Address();
+            //   Product product= new Product(23);
+            //   Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
+            //        HomePage homePage=new HomePage(driver);
+            //        StorePage storePage= homePage.clickStore();
+            //        storePage.searchProduct();
+            //      CartPage cartPage= storePage.addAndViewcart();
+            //      CheckoutPage checkoutPage = cartPage.checkAndCheckout();
+            //      //Address address= new Address().setfName("anil").setlName("kumar").setStreetAddress("a.t.agraharam").setTownOrCity("guntur").setZipCode("522005").setEmailAddress("email@gmail.com");
+            //    //  checkoutPage.enterFname("anil").enterLname("kumar").enterBillingAddress1("a.t.agraharam").enterBillingCity("guntur").enterBillingPcode("522004").enterBillingEmail("ee@ee.com");
+            //    checkoutPage.fillForm(address);
+            //         }
 }

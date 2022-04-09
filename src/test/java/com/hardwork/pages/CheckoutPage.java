@@ -10,7 +10,6 @@ public class CheckoutPage extends BasePage {
 
     protected CheckoutPage(WebDriver driver) {
         super(driver);
-        //TODO Auto-generated constructor stub
     }
 
     public void fillForm(Address address){
