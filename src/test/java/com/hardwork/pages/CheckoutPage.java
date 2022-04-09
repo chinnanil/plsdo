@@ -1,7 +1,10 @@
 package com.hardwork.pages;
 
+import java.time.Duration;
+
 import com.hardwork.base.BasePage;
 import com.hardwork.utils.Address;
+import com.hardwork.utils.User;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +15,14 @@ public class CheckoutPage extends BasePage {
         super(driver);
     }
 
+    public CheckoutPage login(User user){
+        driver.findElement(By.className("showlogin")).click();
+        driver.findElement(By.id("username")).sendKeys(user.getUserName());
+        driver.findElement(By.id("password")).sendKeys(user.getPassword());
+        driver.findElement(By.xpath("//*[@id=\"post-1221\"]/div/div/div/div/form[1]/p[4]/button")).click();
+        return this;
+    }
+    
     public void fillForm(Address address){
             this.enterFname(address.getfName()).enterLname(address.getlName()).
              enterBillingAddress1(address.getStreetAddress()).enterBillingCity(address.getTownOrCity()).
