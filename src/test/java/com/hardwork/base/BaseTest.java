@@ -10,7 +10,7 @@ public class BaseTest {
    protected WebDriver driver;
     @BeforeMethod 
     public void startDriver(){
-        driver=new MydriverManager().initialiseDriver();
+        driver=new MydriverManager().initialiseDriver("firefox");
         driver.get("http://askomdch.com"); 
         driver.manage().window().maximize();
     }

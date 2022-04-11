@@ -15,6 +15,10 @@ public class StorePage extends BasePage {
             super(driver);
             elUtils=new ElementUtils(driver);
     }
+    public StorePage checkStorePageLoaded(){
+        wait.until(ExpectedConditions.urlContains("store"));
+        return this;
+    }
     public void searchProduct(){
         wait.until(ExpectedConditions.visibilityOf(elUtils.getElementByID(searchBox))).sendKeys("blue");
         elUtils.getElementByXpath(By.xpath("//*[@id=\"woocommerce_product_search-1\"]/form/button")).click();
