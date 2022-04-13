@@ -1,12 +1,13 @@
 package com.hardwork.utils;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 public class PropertyUtils {
 public static Properties propertyLoader(String filepath) {
-	Properties properties = new properties();
+	Properties properties = new Properties();
 	BufferedReader reader;
 	try {
 		reader=new BufferedReader(new FileReader(filePath));
