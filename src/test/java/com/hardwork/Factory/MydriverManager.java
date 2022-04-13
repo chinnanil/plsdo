@@ -6,22 +6,30 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+enum DriverType{
+    CHROME,
+    FIREFOX
+}
+
 public class MydriverManager {
 
     public WebDriver initialiseDriver(String browser) {
         WebDriver driver=null;        
-        switch (browser) {
-            case "chrome":
+        String localBrowser;
+        localBrowser = System.getProperty("browser",browser);
+       // localBrowser=browser;
+        switch (DriverType.valueOf(localBrowser)) {
+            case CHROME:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-            case "firefox":
+            case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 driver=new FirefoxDriver();
                 break;
                 default:
-                        System.out.println("please input browser");
-                        break;
+                      throw new IllegalStateException("invalid  browser") ;
+                        
 
         }
         return driver;

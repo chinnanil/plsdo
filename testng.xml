@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ 
+<suite name="Suite1" verbose="1" >
+  <test name="firefox"  >
+   	<parameter name="browser" value="FIREFOX"></parameter>
+   	<classes>
+       <class name="com.hardwork.AppTest"></class>
+   	</classes>
+   	</test>
+	   <!-- <test name="chrome"  >
+   
+		<parameter name="browser" value="CHROME"></parameter>
+		   <classes>
+			   <class name="com.hardwork.AppTest"></class>
+		   </classes>
+		 </test> -->
+  </suite>

@@ -12,6 +12,8 @@ public class HomePage extends BasePage{
 
     public HomePage(WebDriver driver) {
         super(driver);
+        driver.get("http://askomdch.com"); 
+        driver.manage().window().maximize();
         elUtils=new ElementUtils(driver);
             }
     public StorePage clickStore(){

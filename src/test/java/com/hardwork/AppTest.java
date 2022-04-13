@@ -34,7 +34,7 @@ public class AppTest extends BaseTest
      // Address address=new Address();
      Products product= new Products(123);
       Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
-           HomePage homePage=new HomePage(driver);
+           HomePage homePage=new HomePage(getDriver());
            StorePage storePage= homePage.clickStore();
            storePage.checkStorePageLoaded().searchProduct();
            
@@ -52,7 +52,7 @@ public class AppTest extends BaseTest
              User user=new User("anil","anilanil");
               Products product= new Products(123);
               Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
-                   HomePage homePage=new HomePage(driver);
+                   HomePage homePage=new HomePage(getDriver());
                    StorePage storePage= homePage.clickStore();
                    storePage.checkStorePageLoaded().searchProduct();
                  CartPage cartPage= storePage.addAndViewcart();
