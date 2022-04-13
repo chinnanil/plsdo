@@ -80,10 +80,10 @@
           <configuration>
             <parallel>methods</parallel>
             <threadCount>10</threadCount>
-          <!--   <suiteXmlFiles>
-              <suiteXmlFile>testng.xml</suiteXmlFile> -->
+            <suiteXmlFiles>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
               <!-- <suiteXmlFile>testng1.xml</suiteXmlFile> -->
-            <!-- </suiteXmlFiles>-->
+            </suiteXmlFiles>
           </configuration> 
         </plugin>
         <plugin>
