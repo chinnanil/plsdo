@@ -26,3 +26,5 @@ z_build
 .DS_Store
 
 **/Version.java
+/.apt_generated/
+/bin/
