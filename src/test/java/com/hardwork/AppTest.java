@@ -14,6 +14,7 @@ import com.hardwork.utils.Address;
 import com.hardwork.utils.JacksonUtils;
 import com.hardwork.utils.Products;
 import com.hardwork.utils.User;
+import com.hardwork.utils.ConfigLoader;
 
 import org.testng.annotations.Test;
 
@@ -33,8 +34,9 @@ public class AppTest extends BaseTest
     {
      // Address address=new Address();
      Products product= new Products(123);
+     ConfigLoader confDotProp=ConfigLoader.confSingleTon();
       Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
-           HomePage homePage=new HomePage(getDriver());
+           HomePage homePage=new HomePage(getDriver(),confDotProp.getBaseUrl());
            StorePage storePage= homePage.clickStore();
            storePage.checkStorePageLoaded().searchProduct();
            
@@ -49,10 +51,11 @@ public class AppTest extends BaseTest
             public void loginAndcheckoutDBT() throws StreamReadException, DatabindException, IOException
             {
              // Address address=new Address();
+             ConfigLoader conf=ConfigLoader.confSingleTon();
              User user=new User("anil","anilanil");
               Products product= new Products(123);
               Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
-                   HomePage homePage=new HomePage(getDriver());
+                   HomePage homePage=new HomePage(getDriver(),conf.getBaseUrl());
                    StorePage storePage= homePage.clickStore();
                    storePage.checkStorePageLoaded().searchProduct();
                  CartPage cartPage= storePage.addAndViewcart();
