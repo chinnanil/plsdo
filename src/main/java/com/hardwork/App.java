@@ -1,5 +1,7 @@
 package com.hardwork;
 
+import com.google.common.base.Ascii;
+
 import org.checkerframework.common.reflection.qual.ForName;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -7,44 +9,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * Hello world!
  *
  */
-class A{
-  String str;
-  public A(){
-
-  }
-  public A(String str){
-    this.str=str;
-  }
-}
-class B extends A{
-  public B(String str){
-    super(str);
-  }
-  void fun(){
-    System.out.println(str);
-  }
-}
-class C extends A{
-
-  void fun(){
-    System.out.println(str);
-  }
-}
-
 public class App 
 {
     
-    public <T> void  func(T t){
-            
-    }
+ 
     public static void main( String[] args ) throws ClassNotFoundException
     {
-        //new App().fun(int.class);
-      //  App app=new App();
-        // System.out.println(c);
-      //  System.out.println( cc );
-      // new B().fun();
-      new B("iloveme").fun();
-      new C().fun();
+        int capCount=0,smallCount=0;
+        String str="WelcoMe to AutoMation";
+// System.out.println(((int)'a')+"" + ((int)'z'));
+        for(int i=0;i<str.length();i++){
+//           if(((int)str.charAt(i))>=65&&((int)str.charAt(i))<=90){
+//                     capCount++;
+//           }
+//           else if(((int)str.charAt(i))>=97&&((int)str.charAt(i))<=122){
+//             smallCount++;
+//   }
+
+
+
+        }
+        System.out.println("capital letters are :" +capCount + "small letters are :" + smallCount);   
     }
 }

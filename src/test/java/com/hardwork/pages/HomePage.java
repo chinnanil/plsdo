@@ -12,7 +12,7 @@ public class HomePage extends BasePage{
 
     public HomePage(WebDriver driver,String baseUrlFromConfLoader) {
         super(driver);
-        driver.get(baseUrlFromConfLoader); 
+        
         driver.manage().window().maximize();
         elUtils=new ElementUtils(driver);
             }

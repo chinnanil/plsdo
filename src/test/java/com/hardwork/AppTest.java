@@ -36,9 +36,9 @@ public class AppTest extends BaseTest
      Products product= new Products(123);
      ConfigLoader confDotProp=ConfigLoader.confSingleTon();
       Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
-           HomePage homePage=new HomePage(getDriver(),confDotProp.getBaseUrl());
-           StorePage storePage= homePage.clickStore();
-           storePage.checkStorePageLoaded().searchProduct();
+           
+           
+           storePage.searchProduct();
            
          CartPage cartPage= storePage.addAndViewcart();
          CheckoutPage checkoutPage = cartPage.checkAndCheckout(product);
