@@ -5,6 +5,7 @@ import com.hardwork.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ElementUtils extends BasePage {
 
@@ -36,6 +37,7 @@ public WebElement getElementByTagName(By tagName ){
 }
 
 public WebElement getElementByXpath(By xPath ){
-    return driver.findElement(xPath);
+    return wait.until(ExpectedConditions.presenceOfElementLocated(xPath));
+    // return driver.findElement(xPath);
 }
 }

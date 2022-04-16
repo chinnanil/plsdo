@@ -34,15 +34,15 @@ public class AppTest extends BaseTest
     {
      // Address address=new Address();
      Products product= new Products(123);
-     ConfigLoader confDotProp=ConfigLoader.confSingleTon();
+    
       Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
            
            
-           storePage.searchProduct();
+        //    storePage.searchProduct();
            
-         CartPage cartPage= storePage.addAndViewcart();
-         CheckoutPage checkoutPage = cartPage.checkAndCheckout(product);
-         checkoutPage.enterCountry("India");
+        //  CartPage cartPage= storePage.addAndViewcart();
+        //  CheckoutPage checkoutPage = cartPage.checkAndCheckout(product);
+        //  checkoutPage.enterCountry("India");
          //Address address= new Address().setfName("anil").setlName("kumar").setStreetAddress("a.t.agraharam").setTownOrCity("guntur").setZipCode("522005").setEmailAddress("email@gmail.com");
        //  checkoutPage.enterFname("anil").enterLname("kumar").enterBillingAddress1("a.t.agraharam").enterBillingCity("guntur").enterBillingPcode("522004").enterBillingEmail("ee@ee.com");
       // checkoutPage.fillForm(address);
@@ -55,7 +55,7 @@ public class AppTest extends BaseTest
              User user=new User("anil","anilanil");
               Products product= new Products(123);
               Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
-                   HomePage homePage=new HomePage(getDriver(),conf.getBaseUrl());
+                   HomePage homePage=new HomePage(getDriver());
                    StorePage storePage= homePage.clickStore();
                    storePage.checkStorePageLoaded().searchProduct();
                  CartPage cartPage= storePage.addAndViewcart();

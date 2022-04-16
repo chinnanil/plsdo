@@ -2,6 +2,7 @@ package com.hardwork.base;
 
 import com.google.j2objc.annotations.Property;
 import com.hardwork.Factory.MydriverManager;
+import com.hardwork.utils.ConfigLoader;
 
 import javax.annotation.PropertyKey;
 
@@ -24,6 +25,7 @@ public class BaseTest {
   public void startDriver(String browser){
    
         setDriver(new MydriverManager().initialiseDriver(browser));
+        getDriver().get(ConfigLoader.confSingleTon().getBaseUrl());
      System.out.println("opened"+Thread.currentThread());
      
     }
