@@ -2,7 +2,7 @@ package com.hardwork.utils;
 
 import java.util.Properties;
 
-import org.apache.commons.lang3.ObjectUtils.Null;
+// import org.apache.commons.lang3.ObjectUtils.Null;
 
 public class ConfigLoader {
     private final Properties properties;

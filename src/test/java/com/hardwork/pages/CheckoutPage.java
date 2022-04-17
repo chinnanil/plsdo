@@ -1,6 +1,6 @@
 package com.hardwork.pages;
 
-import java.time.Duration;
+// import java.time.Duration;
 
 import com.hardwork.base.BasePage;
 import com.hardwork.utils.Address;
@@ -11,11 +11,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+// import org.openqa.selenium.support.ui.Select;
 
 public class CheckoutPage extends BasePage {
 
-    private Object executeScript;
+    // private Object executeScript;
 protected CheckoutPage(WebDriver driver) {
         super(driver);
     }
