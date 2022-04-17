@@ -26,13 +26,13 @@ public class BaseTest {
    
         setDriver(new MydriverManager().initialiseDriver(browser));
         getDriver().get(ConfigLoader.confSingleTon().getBaseUrl());
-     System.out.println("opened"+Thread.currentThread());
+    // System.out.println("opened"+Thread.currentThread());
      
     }
     @AfterMethod
-    public void quitDriver(){
-     System.out.println("closed"+Thread.currentThread());
-
+    public void quitDriver() throws InterruptedException{
+    // System.out.println("closed"+Thread.currentThread());
+    Thread.sleep(5000);
 getDriver().quit();
       //  driver.quit();
     }

@@ -16,7 +16,8 @@ public class StorePage extends BasePage {
             elUtils=new ElementUtils(driver);
     }
     public StorePage checkStorePageLoaded(){
-        wait.until(ExpectedConditions.urlContains("store"));
+       
+        wait.until(ExpectedConditions.urlContains("post_type=product"));
         return this;
     }
     public void searchProduct(){
