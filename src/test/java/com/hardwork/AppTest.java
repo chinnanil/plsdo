@@ -1,7 +1,7 @@
 package com.hardwork;
 
 import java.io.IOException;
-import java.io.InputStream;
+// import java.io.InputStream;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
@@ -33,9 +33,9 @@ public class AppTest extends BaseTest
     public void checkoutDBT() throws StreamReadException, DatabindException, IOException
     {
      // Address address=new Address();
-     Products product= new Products(123);
+    //  Products product= new Products(123);
     
-      Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
+    //   Address address =JacksonUtils.deserializeJson("billingJson.json", Address.class);
            
            
         //    storePage.searchProduct();
