@@ -2,8 +2,8 @@ package com.hardwork.api.actions;
 
 public class DummyClass {
     public static void main(String[] args) {
-        new SignUpApi().getAccount();
-      
+        // System.out.println(new SignUpApi().fetchRegisterNonceValue());
+System.out.println(new SignUpApi().fetchRegisterNonceValueUsingJsoup());
     }
      
 }

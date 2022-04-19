@@ -10,6 +10,11 @@ import io.restassured.response.Response;
 // import static org.hamcrest.Matchers.*;
 import com.hardwork.utils.ConfigLoader;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.openqa.selenium.json.Json;
+
 
 public class SignUpApi {
         private Cookies cookies;
@@ -17,6 +22,17 @@ public class SignUpApi {
         public Cookies getCookies(){
             return cookies;
         }
+
+public String fetchRegisterNonceValue(){
+Response response=getAccount();
+return response.htmlPath().getString("**.findAll {it.@name == 'woocommerce-register-nonce' }.@value");
+}
+public String fetchRegisterNonceValueUsingJsoup(){
+    Response response=getAccount();
+    Document doc=Jsoup.parse(response.htmlPath().prettyPrint());
+    Element ele= doc.selectFirst("#woocommerce-register-nonce");
+    return ele.attr("value");
+}
 
         public Response getAccount(){
             System.out.println("in get account");
